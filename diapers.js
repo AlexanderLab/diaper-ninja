@@ -12,7 +12,10 @@ import puppeteer from 'puppeteer';
     { name: 'Lillydoo talla 1', count: 144, url: 'https://www.amazon.es/dp/B0F3P5TKJ1' },
   ];
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : []
+  });
   const page = await browser.newPage();
 
   let logEntry = `${fecha}`;
