@@ -80,7 +80,7 @@ const processChartData = (data) => {
 }
 
 onMounted(() => {
-  Papa.parse('../public/diapers.csv', {
+  Papa.parse('./diapers.csv', {
     download: true,
     header: true,
     complete: (results) => {
