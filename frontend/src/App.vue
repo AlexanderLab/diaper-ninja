@@ -236,6 +236,7 @@ onMounted(() => {
 html,
 body {
   background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .q-layout,
@@ -262,6 +263,14 @@ body {
   background-color: #ffffff !important;
 }
 
+.text-h6,
+.text-body1,
+.text-body2,
+div,
+span {
+  color: #000000 !important;
+}
+
 .chart-section {
   height: 250px;
   padding: 8px;
@@ -278,12 +287,14 @@ body {
 @media (max-width: 599px) {
   .text-h6 {
     font-size: 1.1rem !important;
+    color: #000000 !important;
   }
   
   .q-table th,
   .q-table td {
     font-size: 0.75rem !important;
     padding: 4px 8px !important;
+    color: #000000 !important;
   }
 }
 </style>
