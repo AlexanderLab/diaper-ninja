@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+*.log
+daily_check.bat
+startup.bat
+run_hidden.vbs
+diapers.txt
+frontend/dist
+frontend/node_modules

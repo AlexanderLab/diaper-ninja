@@ -1,0 +1,13 @@
+{
+    "name": "diaper-tracker",
+    "version": "1.0.0",
+    "description": "Daily diaper price tracker",
+    "main": "diapers.js",
+    "type": "module",
+    "scripts": {
+        "start": "node diapers.js"
+    },
+    "dependencies": {
+        "puppeteer": "^23.0.0"
+    }
+}
