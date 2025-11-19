@@ -233,10 +233,6 @@ onMounted(() => {
 </template>
 
 <style>
-* {
-  background-color: transparent !important;
-}
-
 html,
 body {
   background-color: #ffffff !important;
@@ -259,6 +255,10 @@ body {
 }
 
 .q-card {
+  background-color: #ffffff !important;
+}
+
+.q-card-section {
   background-color: #ffffff !important;
 }
 
