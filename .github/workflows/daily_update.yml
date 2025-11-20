@@ -2,7 +2,7 @@ name: Daily Price Update and Deploy
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs at 08:00 UTC (09:00 Spanish time)
+    - cron: '0 12 * * *'  # Runs at 12:00 UTC (13:00 Spanish time)
   workflow_dispatch:  # Allows manual trigger
   push:
     branches: [ main ]
