@@ -164,6 +164,7 @@ onMounted(() => {
                 <q-card>
                   <q-card-section>
                     <div class="text-h6 text-body1-sm">Tendencia de precios (Por Unidad)</div>
+                    <div class="text-h10 text-body1-sm">Se actualiza a diario a las 11am hora española</div>
                   </q-card-section>
                   <q-card-section class="chart-section">
                     <Line v-if="loaded" :data="chartData" :options="chartOptions" />
