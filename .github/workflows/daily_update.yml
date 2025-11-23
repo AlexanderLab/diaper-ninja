@@ -1,8 +1,6 @@
-name: Daily Price Update and Deploy
+name: Deploy to GitHub Pages
 
 on:
-  schedule:
-    - cron: '0 10 * * *'  # Runs at 10:00 UTC (11:00 Spanish time)
   workflow_dispatch:  # Allows manual trigger
   push:
     branches: [ main ]
@@ -13,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  scrape-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,20 +22,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-        
-    - name: Install root dependencies
-      run: npm install
-      
-    - name: Run price scraper
-      run: node diapers.js
-      
-    - name: Commit updated data
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add frontend/public/diapers.csv
-        git diff --staged --quiet || git commit -m "Update diaper prices - $(date +'%Y-%m-%d %H:%M')"
-        git push
         
     - name: Install frontend dependencies
       working-directory: ./frontend

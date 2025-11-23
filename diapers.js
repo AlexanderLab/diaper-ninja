@@ -3,7 +3,14 @@ import puppeteer from 'puppeteer';
 
 (async () => {
   const timestamp = Date.now();
-  const fecha = new Date(timestamp).toLocaleString();
+  const date = new Date(timestamp);
+  // Use consistent date format: YYYY-MM-DD HH:MM:SS
+  const fecha = date.getFullYear() + '-' +
+    String(date.getMonth() + 1).padStart(2, '0') + '-' +
+    String(date.getDate()).padStart(2, '0') + ' ' +
+    String(date.getHours()).padStart(2, '0') + ':' +
+    String(date.getMinutes()).padStart(2, '0') + ':' +
+    String(date.getSeconds()).padStart(2, '0');
 
   const products = [
     { name: 'Dodot talla 1', count: 224, url: 'https://www.amazon.es/dp/B0976XNCQ5' },
@@ -27,7 +34,7 @@ import puppeteer from 'puppeteer';
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    fs.writeFileSync(csvFile, 'Fecha,Producto,Numero de Pañales,Precio,Precio por unidad\n');
+    fs.writeFileSync(csvFile, 'Fecha,Producto,Numero de Pañales,Precio,Precio por unidad\r\n');
   }
 
   for (const product of products) {
@@ -39,8 +46,8 @@ import puppeteer from 'puppeteer';
 
       logEntry += ` ${product.name} (${product.count} pañales): ${priceText} por unidad : ${pricePerUnit}`;
 
-      // Append to CSV
-      const csvLine = `"${fecha}","${product.name}",${product.count},${price},${pricePerUnit}\n`;
+      // Append to CSV with Windows line ending
+      const csvLine = `"${fecha}","${product.name}",${product.count},${price},${pricePerUnit}\r\n`;
       fs.appendFileSync(csvFile, csvLine);
 
     } catch (error) {
