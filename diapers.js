@@ -4,10 +4,10 @@ import puppeteer from 'puppeteer';
 (async () => {
   const timestamp = Date.now();
   const date = new Date(timestamp);
-  // Use consistent date format: YYYY-MM-DD HH:MM:SS
-  const fecha = date.getFullYear() + '-' +
-    String(date.getMonth() + 1).padStart(2, '0') + '-' +
-    String(date.getDate()).padStart(2, '0') + ' ' +
+  // Use DD/MM/YYYY, HH:MM:SS format
+  const fecha = String(date.getDate()).padStart(2, '0') + '/' +
+    String(date.getMonth() + 1).padStart(2, '0') + '/' +
+    date.getFullYear() + ', ' +
     String(date.getHours()).padStart(2, '0') + ':' +
     String(date.getMinutes()).padStart(2, '0') + ':' +
     String(date.getSeconds()).padStart(2, '0');
