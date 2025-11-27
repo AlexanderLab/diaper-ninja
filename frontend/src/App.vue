@@ -35,8 +35,8 @@ const groupedColumns = [
   { name: 'date', label: 'Fecha', field: 'date', sortable: true, align: 'left' },
   { name: 'dodot1', label: 'Dodot T1', field: 'dodot1', sortable: false, align: 'right' },
   { name: 'dodot2', label: 'Dodot T2', field: 'dodot2', sortable: false, align: 'right' },
-  { name: 'huggies1', label: 'Huggies T1', field: 'huggies1', sortable: false, align: 'right' },
-  { name: 'lillydoo1', label: 'Lillydoo T1', field: 'lillydoo1', sortable: false, align: 'right' }
+  { name: 'lillydoo1', label: 'Lillydoo T1', field: 'lillydoo1', sortable: false, align: 'right' },
+  { name: 'lillydoo2', label: 'Lillydoo T2', field: 'lillydoo2', sortable: false, align: 'right' }
 ]
 
 const rows = ref([])
@@ -63,8 +63,8 @@ const processGroupedData = (data) => {
         date: row.Fecha,
         dodot1: '-',
         dodot2: '-',
-        huggies1: '-',
-        lillydoo1: '-'
+        lillydoo1: '-',
+        lillydoo2: '-'
       }
     }
     
@@ -73,10 +73,10 @@ const processGroupedData = (data) => {
       grouped[row.Fecha].dodot1 = pricePerUnit
     } else if (row.Producto === 'Dodot talla 2') {
       grouped[row.Fecha].dodot2 = pricePerUnit
-    } else if (row.Producto === 'Huggies talla 1') {
-      grouped[row.Fecha].huggies1 = pricePerUnit
     } else if (row.Producto === 'Lillydoo talla 1') {
       grouped[row.Fecha].lillydoo1 = pricePerUnit
+    } else if (row.Producto === 'Lillydoo talla 2') {
+      grouped[row.Fecha].lillydoo2 = pricePerUnit
     }
   })
   

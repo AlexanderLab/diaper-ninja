@@ -15,8 +15,8 @@ import puppeteer from 'puppeteer';
   const products = [
     { name: 'Dodot talla 1', count: 224, url: 'https://www.amazon.es/dp/B0976XNCQ5' },
     { name: 'Dodot talla 2', count: 198, url: 'https://www.amazon.es/dp/B0DJBYVG1Q' },
-    { name: 'Huggies talla 1', count: 160, url: 'https://www.amazon.es/dp/B08CYCV9PQ' },
     { name: 'Lillydoo talla 1', count: 144, url: 'https://www.amazon.es/dp/B0F3P5TKJ1' },
+    { name: 'Lillydoo talla 2', count: 204, url: 'https://www.amazon.es/dp/B0F3P56XRH' },
   ];
 
   const browser = await puppeteer.launch({
