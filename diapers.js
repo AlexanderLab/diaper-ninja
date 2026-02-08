@@ -17,7 +17,32 @@ import puppeteer from 'puppeteer';
     { name: 'Dodot talla 2', count: 198, url: 'https://www.amazon.es/dp/B0DJBYVG1Q' },
     { name: 'Lillydoo talla 1', count: 144, url: 'https://www.amazon.es/dp/B0F3P5TKJ1' },
     { name: 'Lillydoo talla 2', count: 204, url: 'https://www.amazon.es/dp/B0F3P56XRH' },
+    { name: 'Nido capazo bebe', count: 1, url: 'https://www.amazon.es/dp/B0FNMS82XK' }
   ];
+
+  // --- TELEGRAM CONFIGURATION ---
+  const TELEGRAM_TOKEN = '8040504577:AAEtt_CZwVejmGzTx7mwgx5VYmDdLRnGfs8';
+  const TELEGRAM_CHAT_ID = '-4644588323';
+  const PRICE_THRESHOLD = 170;
+  // -------------------------------
+
+  const sendTelegramMessage = async (message) => {
+    try {
+      const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+      await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message,
+          parse_mode: 'HTML'
+        })
+      });
+      console.log('Telegram message sent!');
+    } catch (error) {
+      console.error('Error sending Telegram message:', error);
+    }
+  };
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -49,6 +74,12 @@ import puppeteer from 'puppeteer';
       // Append to CSV with Windows line ending
       const csvLine = `"${fecha}","${product.name}",${product.count},${price},${pricePerUnit}\r\n`;
       fs.appendFileSync(csvFile, csvLine);
+
+      // Telegram alert logic
+      if (product.name === 'Nido capazo bebe' && price <= PRICE_THRESHOLD) {
+        const message = `El <b>${product.name}</b> ha bajado a <b>${price}€</b>.\n\nEnlace: <a href="${product.url}">Amazon</a>`;
+        await sendTelegramMessage(message);
+      }
 
     } catch (error) {
       console.error(`Error fetching ${product.name}:`, error.message);
