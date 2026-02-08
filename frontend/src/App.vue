@@ -120,6 +120,23 @@ const processChartData = (data) => {
   loaded.value = true
 }
 
+const nidoChartData = computed(() => {
+  const filtered = rows.value.filter(row => row.Producto === 'Nido capazo bebe')
+  const dates = filtered.map(row => row.Fecha)
+  const prices = filtered.map(row => parseFloat(row.Precio))
+  
+  return {
+    labels: dates,
+    datasets: [{
+      label: 'Nido capazo bebe',
+      backgroundColor: '#1976D2',
+      borderColor: '#1976D2',
+      data: prices,
+      tension: 0.1
+    }]
+  }
+})
+
 onMounted(() => {
   Papa.parse('./diapers.csv', {
     download: true,
@@ -149,6 +166,7 @@ onMounted(() => {
       
       <q-tabs v-model="tab" align="center" class="bg-primary">
         <q-tab name="overview" label="Charts" />
+        <q-tab name="nido" label="Nido Capazo" />
         <q-tab name="log" label="Log" />
       </q-tabs>
     </q-header>
@@ -201,6 +219,21 @@ onMounted(() => {
                 </q-card>
               </div>
             </div>
+          </q-tab-panel>
+
+          <!-- Nido Capazo Tab -->
+          <q-tab-panel name="nido" class="q-pa-sm q-pa-md-md">
+            <q-card>
+              <q-card-section>
+                <div class="text-h6 text-body1-sm">Seguimiento de precio: Nido capazo bebe</div>
+              </q-card-section>
+              <q-card-section class="chart-section">
+                <Line v-if="loaded" :data="nidoChartData" :options="chartOptions" />
+                <div v-else class="flex flex-center full-height">
+                  <q-spinner color="primary" size="3em" />
+                </div>
+              </q-card-section>
+            </q-card>
           </q-tab-panel>
 
           <!-- Log Tab -->
