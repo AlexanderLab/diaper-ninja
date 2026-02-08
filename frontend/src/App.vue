@@ -89,7 +89,7 @@ const processChartData = (data) => {
   const dates = new Set()
 
   data.forEach(row => {
-    if (!row.Fecha || !row.Producto) return
+    if (!row.Fecha || !row.Producto || row.Producto === 'Nido capazo bebe') return
     
     dates.add(row.Fecha)
     
