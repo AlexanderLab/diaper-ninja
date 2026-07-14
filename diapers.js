@@ -152,8 +152,21 @@ if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
     });
     
     const page = await browser.newPage();
+    
+    // Hide webdriver status to bypass simple anti-bot checks
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', {
+        get: () => undefined,
+      });
+    });
+
     await page.setViewport({ width: 1280, height: 800 });
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': 'es-ES,es;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'Upgrade-Insecure-Requests': '1'
+    });
 
     let logEntry = `${fecha}`;
 
@@ -171,36 +184,61 @@ if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
       try {
         // Go to Amazon product page
         await page.goto(product.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-        // Wait a tiny bit for price elements to render
-        await new Promise(r => setTimeout(r, 2000));
+        
+        // Wait a tiny bit for elements to render
+        await new Promise(r => setTimeout(r, 2000 + Math.random() * 1000));
 
-        // Extract Title
-        const title = await page.$eval('#productTitle', el => el.textContent.trim());
+        // Check if we hit the CAPTCHA check
+        const pageTitle = await page.title();
+        if (pageTitle.toLowerCase().includes('bot') || 
+            pageTitle.toLowerCase().includes('captcha') || 
+            pageTitle.toLowerCase().includes('robot') || 
+            pageTitle.toLowerCase().includes('security') ||
+            pageTitle === 'Amazon.es' || 
+            pageTitle === 'Amazon.es: bot') {
+          throw new Error(`Amazon Bot Blocked: Robot Check CAPTCHA page detected (Page Title: "${pageTitle}")`);
+        }
+
+        // Extract Title with fallback selectors
+        let title = '';
+        const titleSelectors = ['#productTitle', '#title', 'h1.a-size-large', 'h1'];
+        for (const sel of titleSelectors) {
+          try {
+            title = await page.$eval(sel, el => el.textContent.trim());
+            if (title) break;
+          } catch (_) {}
+        }
+        
+        if (!title) {
+          throw new Error('failed to find element matching selector "#productTitle" or fallback title selectors');
+        }
+
         const count = extractCountFromTitle(title);
         console.log(`- Extracted title: "${title.slice(0, 50)}..."`);
         console.log(`- Detected count: ${count} units`);
 
-        // Extract Price (Robust parsing)
+        // Extract Price (Robust parsing with fallback selectors)
         let price = 0;
-        try {
-          // Try span.a-price span.a-offscreen first
-          const priceOffscreen = await page.$eval('span.a-price .a-offscreen', el => el.textContent);
-          const cleaned = priceOffscreen.replace(/[^\d.,]/g, '').replace(',', '.');
-          price = parseFloat(cleaned);
-        } catch (priceError) {
-          // Fallback to .a-price-whole and .a-price-fraction
-          const wholeText = await page.$eval('.a-price-whole', el => el.textContent);
-          let fractionText = '00';
+        const priceSelectors = [
+          'span.a-price .a-offscreen',
+          '#price_inside_buybox',
+          '#newBuyBoxPrice',
+          '.a-price-whole'
+        ];
+        
+        for (const sel of priceSelectors) {
           try {
-            fractionText = await page.$eval('.a-price-fraction', el => el.textContent);
+            const rawPrice = await page.$eval(sel, el => el.textContent.trim());
+            if (rawPrice) {
+              const cleaned = rawPrice.replace(/[^\d.,]/g, '').replace(',', '.');
+              price = parseFloat(cleaned);
+              if (!isNaN(price) && price > 0) break;
+            }
           } catch (_) {}
-          const cleanedWhole = wholeText.replace(/[^\d]/g, '');
-          const cleanedFraction = fractionText.replace(/[^\d]/g, '');
-          price = parseFloat(`${cleanedWhole}.${cleanedFraction}`);
         }
 
         if (isNaN(price) || price <= 0) {
-          throw new Error('Price parsed is invalid: ' + price);
+          throw new Error('failed to find price element or price parsed is invalid');
         }
         
         console.log(`- Scraped price: ${price}€`);
@@ -208,7 +246,7 @@ if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
         const pricePerUnit = (price / count).toFixed(3);
         logEntry += ` | ${product.name} (${count} pañales): ${price}€ (unidad: ${pricePerUnit}€)`;
 
-        // Append to CSV with Windows line ending
+        // Append to CSV with Windows line ending (using user-defined product name)
         const csvLine = `"${fecha}","${product.name}",${count},${price},${pricePerUnit}\r\n`;
         fs.appendFileSync(csvFile, csvLine);
 
@@ -220,8 +258,13 @@ if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
         }
 
       } catch (error) {
-        console.error(`Error fetching ${product.name}:`, error.message);
-        logEntry += ` | ${product.name}: Error (${error.message})`;
+        let extraInfo = '';
+        try {
+          const pageTitle = await page.title();
+          extraInfo = ` (Page Title: "${pageTitle}")`;
+        } catch (_) {}
+        console.error(`Error fetching ${product.name}:`, error.message, extraInfo);
+        logEntry += ` | ${product.name}: Error (${error.message}${extraInfo})`;
       }
     }
 

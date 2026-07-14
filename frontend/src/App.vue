@@ -484,7 +484,6 @@ onMounted(() => {
           <q-tab name="dashboard" label="Dashboard" icon="dashboard" />
           <q-tab name="products" label="Productos Rastreados" icon="list" />
           <q-tab name="log_raw" label="Log Completo (CSV)" icon="table_chart" />
-          <q-tab name="log_system" label="Logs de Scraper" icon="terminal" />
         </q-tabs>
       </div>
     </q-header>
@@ -688,29 +687,6 @@ onMounted(() => {
             </q-card>
           </q-tab-panel>
 
-          <!-- TAB 4: SYSTEM LOGS -->
-          <q-tab-panel name="log_system" class="q-pa-none">
-            <q-card class="stonks-card">
-              <q-card-section class="flex justify-between items-center">
-                <div>
-                  <div class="title-large">Logs de Ejecución del Scraper</div>
-                  <div class="text-caption text-slate-500">Salida de consola histórica del scraper (diapers.txt)</div>
-                </div>
-                <q-btn
-                  flat
-                  color="indigo"
-                  icon="refresh"
-                  label="Recargar Logs"
-                  @click="loadLogs"
-                  no-caps
-                />
-              </q-card-section>
-              <q-card-section class="q-pt-none">
-                <pre class="bg-slate-900 text-slate-100 q-pa-md rounded-borders text-caption text-left scroll" style="max-height: 500px; font-family: monospace; white-space: pre-wrap; margin: 0;">{{ systemLogs }}</pre>
-              </q-card-section>
-            </q-card>
-          </q-tab-panel>
-
         </q-tab-panels>
       </q-page>
     </q-page-container>
@@ -843,6 +819,24 @@ onMounted(() => {
                   />
                 </div>
               </div>
+            </div>
+            
+            <!-- Hidden Logs for Admin debug -->
+            <div class="border-t border-slate-100 q-mt-md q-pt-md">
+              <div class="flex justify-between items-center q-mb-sm">
+                <div class="text-subtitle2 text-weight-bold text-slate-800">Logs de Ejecución del Scraper</div>
+                <q-btn
+                  flat
+                  dense
+                  color="indigo"
+                  icon="refresh"
+                  label="Recargar"
+                  @click="loadLogs"
+                  no-caps
+                  class="text-caption"
+                />
+              </div>
+              <pre class="bg-slate-900 text-slate-100 q-pa-md rounded-borders text-caption text-left scroll" style="max-height: 180px; font-family: monospace; white-space: pre-wrap; margin: 0; overflow-y: auto;">{{ systemLogs }}</pre>
             </div>
           </div>
         </q-card-section>
