@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import puppeteer from 'puppeteer';
+import { fileURLToPath } from 'node:url';
 import 'dotenv/config';
 
 // Regular expressions to extract diaper/unit count from Amazon product titles
@@ -59,7 +60,8 @@ function parseCSV(csvText) {
 }
 
 // Check if we are running as a direct script
-if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
+const isMain = process.argv[1] && (fs.realpathSync(fileURLToPath(import.meta.url)) === fs.realpathSync(process.argv[1]));
+if (isMain) {
   (async () => {
     const timestamp = Date.now();
     const date = new Date(timestamp);

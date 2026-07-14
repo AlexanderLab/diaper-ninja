@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   workflow_dispatch:  # Allows manual trigger
   schedule:
-    - cron: '0 10 * * *'  # Daily at 10:00 UTC (11:00 or 12:00 in Spain)
+    - cron: '0 9 * * *'  # Daily at 09:00 UTC (11:00 AM Spanish summer time / 10:00 AM winter)
   push:
     branches: [ main ]
     paths-ignore:
