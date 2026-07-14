@@ -451,7 +451,6 @@ onMounted(() => {
           <div>
             <div class="text-h6 text-weight-bold text-slate-900 flex items-center gap-xs">
               Diaper Stonks
-              <q-badge color="indigo-6" outline label="v2.0" class="text-caption text-weight-medium" />
             </div>
             <div class="text-caption text-slate-500 text-weight-medium">Daily diaper price index tracker</div>
           </div>
