@@ -117,8 +117,7 @@ const loadLocalProducts = () => {
         { name: 'Dodot talla 1', url: 'https://www.amazon.es/dp/B0976XNCQ5' },
         { name: 'Dodot talla 2', url: 'https://www.amazon.es/dp/B0DJBYVG1Q' },
         { name: 'Lillydoo talla 1', url: 'https://www.amazon.es/dp/B0F3P5TKJ1' },
-        { name: 'Lillydoo talla 2', url: 'https://www.amazon.es/dp/B0F3P56XRH' },
-        { name: 'Nido capazo bebe', url: 'https://www.amazon.es/dp/B0FNMS82XK' }
+        { name: 'Lillydoo talla 2', url: 'https://www.amazon.es/dp/B0F3P56XRH' }
       ]
     })
 }
@@ -444,19 +443,19 @@ onMounted(() => {
     <!-- Clean SaaS Header -->
     <q-header class="bg-white text-slate-900 border-b border-slate-200">
       <div class="page-container q-py-sm flex justify-between items-center no-wrap">
-        <div class="flex items-center gap-sm">
-          <q-avatar size="42px" square>
+        <div class="flex items-center gap-xs">
+          <q-avatar :size="$q.screen.gt.xs ? '42px' : '32px'" square>
             <img :src="logoUrl" alt="Diaper Stonks Logo" class="rounded-borders" />
           </q-avatar>
           <div>
-            <div class="text-h6 text-weight-bold text-slate-900 flex items-center gap-xs">
+            <div class="text-weight-bold text-slate-900 flex items-center gap-xs" :class="$q.screen.gt.xs ? 'text-h6' : 'text-subtitle1'" style="line-height: 1.2;">
               Diaper Stonks
             </div>
-            <div class="text-caption text-slate-500 text-weight-medium">Daily diaper price index tracker</div>
+            <div class="text-caption text-slate-500 text-weight-medium gt-xs">Daily diaper price index tracker</div>
           </div>
         </div>
 
-        <div class="flex items-center gap-sm">
+        <div class="flex items-center gap-xs">
           <q-btn
             round
             flat
@@ -464,13 +463,14 @@ onMounted(() => {
             icon="settings"
             @click="showConfigModal = true"
           >
-            <q-tooltip font-family="Inter">Ajustes Base de Datos</q-tooltip>
+            <q-tooltip v-if="$q.screen.gt.xs" font-family="Inter">Ajustes Base de Datos</q-tooltip>
           </q-btn>
           
           <q-btn
             color="indigo-6"
             icon="add"
-            label="Añadir Producto"
+            :label="$q.screen.gt.xs ? 'Añadir Producto' : ''"
+            :round="!$q.screen.gt.xs"
             class="btn-primary"
             @click="showAddModal = true"
           />
@@ -540,26 +540,9 @@ onMounted(() => {
 
             <!-- Main Chart Card -->
             <q-card class="stonks-card q-mb-lg">
-              <q-card-section class="flex justify-between items-center q-pb-none">
-                <div>
-                  <div class="title-large">Tendencia de Precios Histórica</div>
-                  <div class="text-caption text-slate-500">Precios actualizados automáticamente desde Amazon</div>
-                </div>
-                <div>
-                  <q-btn-toggle
-                    v-model="chartType"
-                    no-caps
-                    rounded
-                    unelevated
-                    toggle-color="indigo"
-                    color="slate-1"
-                    text-color="slate-7"
-                    :options="[
-                      { label: 'Pañales (€/unidad)', value: 'diapers' },
-                      { label: 'Otros artículos (€/total)', value: 'others' }
-                    ]"
-                  />
-                </div>
+              <q-card-section class="q-pb-none">
+                <div class="title-large" :style="{ fontSize: $q.screen.gt.xs ? '1.5rem' : '1.2rem' }">Tendencia de Precios Histórica</div>
+                <div class="text-caption text-slate-500">Precio unitario (€/pañal) actualizado diariamente desde Amazon</div>
               </q-card-section>
 
               <q-card-section class="chart-section">

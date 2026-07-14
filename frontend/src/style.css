@@ -130,18 +130,45 @@ body {
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 12px;
 }
 
 .chart-section {
-  height: 350px;
+  height: 280px;
   padding: 8px;
   background-color: var(--card-bg) !important;
 }
 
 @media (min-width: 600px) {
+  .page-container {
+    padding: 24px;
+  }
+  
   .chart-section {
     height: 450px;
     padding: 16px;
+  }
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 599px) {
+  .q-table th {
+    font-size: 0.78rem !important;
+    padding: 8px 8px !important;
+  }
+  
+  .q-table td {
+    font-size: 0.8rem !important;
+    padding: 8px 8px !important;
+  }
+
+  .q-tab {
+    font-size: 0.85rem !important;
+    min-height: 40px !important;
+    padding: 0 12px !important;
+  }
+  
+  .title-large {
+    font-size: 1.25rem !important;
   }
 }
