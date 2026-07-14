@@ -450,3 +450,189 @@ To https://github.com/AlexanderLab/diaper-ninja.git
  1 file changed, 4 insertions(+)
 To https://github.com/AlexanderLab/diaper-ninja.git
    e078ddc..b61ba48  main -> main
+09/02/2026, 11:00:02 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 71ce854] Update diaper prices - 09/02/2026 11:00:16,08
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   175056a..71ce854  main -> main
+10/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 919e1fe] Update diaper prices - 10/02/2026 11:00:21,93
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   71ce854..919e1fe  main -> main
+11/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 1b4e34c] Update diaper prices - 11/02/2026 11:00:17,66
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   919e1fe..1b4e34c  main -> main
+12/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main f65c76f] Update diaper prices - 12/02/2026 11:00:17,67
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   1b4e34c..f65c76f  main -> main
+13/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 3007516] Update diaper prices - 13/02/2026 11:00:19,38
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   f65c76f..3007516  main -> main
+14/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 793dc3a] Update diaper prices - 14/02/2026 11:00:20,31
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   3007516..793dc3a  main -> main
+15/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 38, por unidad : 0.264 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 7f0c0b7] Update diaper prices - 15/02/2026 11:00:22,18
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   793dc3a..7f0c0b7  main -> main
+16/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 58, por unidad : 0.259 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 38, por unidad : 0.264 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 84a32a4] Update diaper prices - 16/02/2026 11:00:17,27
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   7f0c0b7..84a32a4  main -> main
+17/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 80, por unidad : 0.357 Dodot talla 2 (198 pañales): 55, por unidad : 0.278 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main bc89d6d] Update diaper prices - 17/02/2026 11:00:22,37
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   84a32a4..bc89d6d  main -> main
+18/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 80, por unidad : 0.357 Dodot talla 2 (198 pañales): 55, por unidad : 0.278 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 92d0672] Update diaper prices - 18/02/2026 11:00:19,82
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   bc89d6d..92d0672  main -> main
+19/02/2026, 11:00:02 Dodot talla 1 (224 pañales): 80, por unidad : 0.357 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 0d8d3c3] Update diaper prices - 19/02/2026 11:00:16,66
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   92d0672..0d8d3c3  main -> main
+20/02/2026, 11:00:02 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main a4dbfe3] Update diaper prices - 20/02/2026 11:00:15,78
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   0d8d3c3..a4dbfe3  main -> main
+22/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 907612c] Update diaper prices - 22/02/2026 11:00:48,13
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   a4dbfe3..907612c  main -> main
+23/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main f1d6fe3] Update diaper prices - 23/02/2026 11:00:24,16
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   907612c..f1d6fe3  main -> main
+24/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main edde052] Update diaper prices - 24/02/2026 11:00:18,64
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   f1d6fe3..edde052  main -> main
+25/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main f714db7] Update diaper prices - 25/02/2026 11:00:20,75
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   edde052..f714db7  main -> main
+26/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main ba7793d] Update diaper prices - 26/02/2026 11:00:22,42
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   f714db7..ba7793d  main -> main
+28/02/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main b3a5fc7] Update diaper prices - 28/02/2026 11:00:16,98
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   ba7793d..b3a5fc7  main -> main
+01/03/2026, 11:00:04 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 993e207] Update diaper prices - 01/03/2026 11:00:20,79
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   b3a5fc7..993e207  main -> main
+02/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 7788057] Update diaper prices - 02/03/2026 11:00:17,79
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   993e207..7788057  main -> main
+03/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 712e12a] Update diaper prices - 03/03/2026 11:00:18,30
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   7788057..712e12a  main -> main
+04/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main c43c8c9] Update diaper prices - 04/03/2026 11:00:18,75
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   712e12a..c43c8c9  main -> main
+05/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main b299f27] Update diaper prices - 05/03/2026 11:00:20,11
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   c43c8c9..b299f27  main -> main
+06/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main d5f437e] Update diaper prices - 06/03/2026 11:00:18,42
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   b299f27..d5f437e  main -> main
+07/03/2026, 11:00:07 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main b05f574] Update diaper prices - 07/03/2026 11:00:45,73
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   d5f437e..b05f574  main -> main
+08/03/2026, 11:00:05 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 39, por unidad : 0.271 Lillydoo talla 2 (204 pañales): 58, por unidad : 0.284 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main fb81dd1] Update diaper prices - 08/03/2026 11:00:33,68
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   b05f574..fb81dd1  main -> main
+09/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 74, por unidad : 0.330 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 35, por unidad : 0.243 Lillydoo talla 2 (204 pañales): 52, por unidad : 0.255 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 788759d] Update diaper prices - 09/03/2026 11:00:17,16
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   fb81dd1..788759d  main -> main
+10/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 54, por unidad : 0.241 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 35, por unidad : 0.243 Lillydoo talla 2 (204 pañales): 52, por unidad : 0.255 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 97e219e] Update diaper prices - 10/03/2026 11:00:21,89
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   788759d..97e219e  main -> main
+11/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 54, por unidad : 0.241 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 35, por unidad : 0.243 Lillydoo talla 2 (204 pañales): 52, por unidad : 0.255 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 56fa563] Update diaper prices - 11/03/2026 11:00:19,01
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   97e219e..56fa563  main -> main
+12/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 54, por unidad : 0.241 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 36, por unidad : 0.250 Lillydoo talla 2 (204 pañales): 52, por unidad : 0.255 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 1546f96] Update diaper prices - 12/03/2026 11:00:21,24
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   56fa563..1546f96  main -> main
+13/03/2026, 11:00:03 Dodot talla 1 (224 pañales): 54, por unidad : 0.241 Dodot talla 2 (198 pañales): 58, por unidad : 0.293 Lillydoo talla 1 (144 pañales): 35, por unidad : 0.243 Lillydoo talla 2 (204 pañales): 52, por unidad : 0.255 Nido capazo bebe (1 pañales): 179, por unidad : 179.000
+
+[main 453edc2] Update diaper prices - 13/03/2026 11:00:21,21
+ 1 file changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   1546f96..453edc2  main -> main

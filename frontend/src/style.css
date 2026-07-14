@@ -1,79 +1,147 @@
+/* Custom variables for SaaS Modern Theme */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  --primary-color: #4f46e5;      /* Indigo */
+  --primary-hover: #4338ca;
+  --success-color: #10b981;      /* Emerald */
+  --background-color: #f8fafc;   /* Slate 50 */
+  --card-bg: #ffffff;
+  --text-primary: #0f172a;       /* Slate 900 */
+  --text-secondary: #475569;     /* Slate 600 */
+  --border-color: #e2e8f0;       /* Slate 200 */
+  
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
+  padding: 0;
+  background-color: var(--background-color) !important;
+  color: var(--text-primary) !important;
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+/* Quasar Overrides for SaaS Theme */
+.q-layout,
+.q-page-container,
+.q-page {
+  background-color: var(--background-color) !important;
+}
+
+/* Header & Tabs */
+.q-header {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.q-tab {
+  text-transform: none !important;
+  font-weight: 500 !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.95rem !important;
+  transition: color 0.2s ease;
+  min-height: 48px !important;
+}
+
+.q-tab--active {
+  color: var(--primary-color) !important;
+}
+
+.q-tab__indicator {
+  background: var(--primary-color) !important;
+  height: 2px !important;
+}
+
+/* Card Styling */
+.stonks-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stonks-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Table Styling */
+.q-table {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.q-table th {
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-size: 0.85rem !important;
+  padding: 12px 16px !important;
+}
+
+.q-table td {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-size: 0.9rem !important;
+  padding: 12px 16px !important;
+}
+
+.q-table__card {
+  box-shadow: none !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+}
+
+/* Dialog & Input Overrides */
+.q-dialog__inner > div {
+  border-radius: 16px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.q-field__native, 
+.q-field__input {
+  color: var(--text-primary) !important;
+}
+
+/* Custom CSS Helpers */
+.title-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.subtitle-medium {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.chart-section {
+  height: 350px;
+  padding: 8px;
+  background-color: var(--card-bg) !important;
+}
+
+@media (min-width: 600px) {
+  .chart-section {
+    height: 450px;
+    padding: 16px;
   }
 }

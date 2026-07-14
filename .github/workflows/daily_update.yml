@@ -2,8 +2,16 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:  # Allows manual trigger
+  schedule:
+    - cron: '0 10 * * *'  # Daily at 10:00 UTC (11:00 or 12:00 in Spain)
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'frontend/public/diapers.csv'
+      - 'frontend/public/products.json'
+      - 'diapers.txt'
+      - 'daily_log.txt'
+      - 'price_check.log'
 
 permissions:
   contents: write
@@ -22,6 +30,29 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
+        
+    - name: Install root dependencies
+      run: npm install
+      
+    - name: Run Scraper
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        PRODUCTS_SHEET_URL: ${{ secrets.PRODUCTS_SHEET_URL }}
+        CI: true
+      run: node diapers.js
+      
+    - name: Commit and push scraper updates
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add frontend/public/diapers.csv frontend/public/products.json diapers.txt
+        if ! git diff --cached --quiet; then
+          git commit -m "Auto-update prices & logs [skip ci]"
+          git push
+        else
+          echo "No changes to commit"
+        fi
         
     - name: Install frontend dependencies
       working-directory: ./frontend
