@@ -1,18 +1,22 @@
 [
   {
     "name": "Dodot talla 1",
-    "url": "https://www.amazon.es/dp/B0976XNCQ5"
+    "url": "https://www.amazon.es/dp/B0976XNCQ5",
+    "threshold": null
   },
   {
     "name": "Dodot talla 2",
-    "url": "https://www.amazon.es/dp/B0DJBYVG1Q"
+    "url": "https://www.amazon.es/dp/B0DJBYVG1Q",
+    "threshold": null
   },
   {
     "name": "Lillydoo talla 1",
-    "url": "https://www.amazon.es/dp/B0F3P5TKJ1"
+    "url": "https://www.amazon.es/dp/B0F3P5TKJ1",
+    "threshold": null
   },
   {
     "name": "Lillydoo talla 2",
-    "url": "https://www.amazon.es/dp/B0F3P56XRH"
+    "url": "https://www.amazon.es/dp/B0F3P56XRH",
+    "threshold": null
   }
 ]
