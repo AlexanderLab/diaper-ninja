@@ -636,3 +636,67 @@ To https://github.com/AlexanderLab/diaper-ninja.git
  1 file changed, 5 insertions(+)
 To https://github.com/AlexanderLab/diaper-ninja.git
    1546f96..453edc2  main -> main
+Loading products from Google Sheets URL...
+Loaded 4 products successfully from Google Sheets.
+Saved latest products list to frontend/public/products.json
+Processing product: Dodot talla 1 (https://www.amazon.es/dp/B0976XNCQ5)
+- Extracted title: "Dodot Pañales Bebé Sensitive, Talla 1 (2-5 kg), 22..."
+- Detected count: 224 units
+- Scraped price: 74.99€
+Processing product: Dodot talla 2 (https://www.amazon.es/dp/B0DJBYVG1Q)
+- Extracted title: "Dodot Pañales Bebé Sensitive Talla 1 (2-5 kg), 174..."
+- Detected count: 174 units
+- Scraped price: 65€
+Processing product: Lillydoo talla 1 (https://www.amazon.es/dp/B0F3P5TKJ1)
+- Extracted title: "Pañales LILLYDOO delicados con la piel - talla 1 (..."
+- Detected count: 144 units
+- Scraped price: 35.99€
+Processing product: Lillydoo talla 2 (https://www.amazon.es/dp/B0F3P56XRH)
+Error fetching Lillydoo talla 2: Navigation timeout of 60000 ms exceeded  (Page Title: "Pañales LILLYDOO delicados con la piel - talla 2 (4+ kg), caja mensual (204 unidades), protección contra fugas, suaves, sin perfumes ni lociones y dermatológicamente probados : Amazon.es: Salud y cuidado personal")
+15/07/2026, 14:36:38 | Dodot talla 1 (224 pañales): 74.99€ (unidad: 0.335€) | Dodot talla 2 (174 pañales): 65€ (unidad: 0.374€) | Lillydoo talla 1 (144 pañales): 35.99€ (unidad: 0.250€) | Lillydoo talla 2: Error (Navigation timeout of 60000 ms exceeded (Page Title: "Pañales LILLYDOO delicados con la piel - talla 2 (4+ kg), caja mensual (204 unidades), protección contra fugas, suaves, sin perfumes ni lociones y dermatológicamente probados : Amazon.es: Salud y cuidado personal"))
+
+Saved latest text logs to frontend/public/diapers.txt
+warning: in the working copy of 'diapers.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/public/products.json', LF will be replaced by CRLF the next time Git touches it
+The following paths are ignored by one of your .gitignore files:
+frontend/public/diapers.txt
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+[main 166f5f0] Update diaper prices - 15/07/2026 14:40:36,73
+ 3 files changed, 12 insertions(+), 4 deletions(-)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   5f5084f..166f5f0  main -> main
+Loading products from Google Sheets URL...
+Loaded 4 products successfully from Google Sheets.
+Saved latest products list to frontend/public/products.json
+Processing product: Dodot talla 1 (https://www.amazon.es/dp/B0976XNCQ5)
+- Extracted title: "Dodot Pañales Bebé Sensitive, Talla 1 (2-5 kg), 22..."
+- Detected count: 224 units
+- Scraped price: 74.99€
+Processing product: Dodot talla 2 (https://www.amazon.es/dp/B0DJBYVG1Q)
+- Extracted title: "Dodot Pañales Bebé Sensitive Talla 1 (2-5 kg), 174..."
+- Detected count: 174 units
+- Scraped price: 65€
+Processing product: Lillydoo talla 1 (https://www.amazon.es/dp/B0F3P5TKJ1)
+- Extracted title: "Pañales LILLYDOO delicados con la piel - talla 1 (..."
+- Detected count: 144 units
+- Scraped price: 35.99€
+Processing product: Lillydoo talla 2 (https://www.amazon.es/dp/B0F3P56XRH)
+- Extracted title: "Pañales LILLYDOO delicados con la piel - talla 2 (..."
+- Detected count: 204 units
+- Scraped price: 50.31€
+16/07/2026, 11:00:05 | Dodot talla 1 (224 pañales): 74.99€ (unidad: 0.335€) | Dodot talla 2 (174 pañales): 65€ (unidad: 0.374€) | Lillydoo talla 1 (144 pañales): 35.99€ (unidad: 0.250€) | Lillydoo talla 2 (204 pañales): 50.31€ (unidad: 0.247€)
+
+Saved latest text logs to frontend/public/diapers.txt
+warning: in the working copy of 'diapers.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/public/products.json', LF will be replaced by CRLF the next time Git touches it
+The following paths are ignored by one of your .gitignore files:
+frontend/public/diapers.txt
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+[main cd401bc] Update diaper prices - 16/07/2026 11:00:31,84
+ 2 files changed, 5 insertions(+)
+To https://github.com/AlexanderLab/diaper-ninja.git
+   166f5f0..cd401bc  main -> main
