@@ -4,6 +4,7 @@ node_modules
 daily_check.bat
 startup.bat
 run_hidden.vbs
+run_daily_hidden.vbs
 diapers.txt
 frontend/dist
 frontend/node_modules
